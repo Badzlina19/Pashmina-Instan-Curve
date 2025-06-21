@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matte Wet and Dry Powder - Premium Fashion</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: #F5F5DC;
+            color: #36454F;
+            overflow-x: hidden;
+        }
+
+        .hero {
+            height: 100vh;
+            background: url('https://cdn.newfastcdn.com/image/01fca61a9c726c9f6f82fd5e2426c64e5394c110.jpeg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            color: #F5F5DC;
+        }
+
+        .hero-overlay {
+            background: rgba(54, 69, 79, 0.5);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            animation: fadeIn 1s ease-in;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        .cta-btn {
+            background: #D4AF37;
+            color: #36454F;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 5px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: fadeIn 2s ease-in;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .section {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: #36454F;
+        }
+
+        .benefits-grid, .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .benefit-card, .testimonial-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .benefit-card:hover, .testimonial-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .benefit-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #D4AF37;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        .pricing {
+            background: #36454F;
+            color: #F5F5DC;
+            padding: 60px 20px;
+        }
+
+        .pricing h2 {
+            color: #F5F5DC;
+        }
+
+        .price-details {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .price-details .normal {
+            text-decoration: line-through;
+            color: #999;
+        }
+
+        .price-details .promo {
+            color: #D4AF37;
+            font-weight: bold;
+        }
+
+        .urgency {
+            font-size: 1.2rem;
+            color: #ff4d4f;
+            margin-bottom: 20px;
+        }
+
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .countdown span {
+            background: #D4AF37;
+            padding: 10px;
+            border-radius: 5px;
+            color: #36454F;
+        }
+
+        .sticky-footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background: #D4AF37;
+            color: #36454F;
+            padding: 15px;
+            text-align: center;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .size-guide-btn, .color-variation-btn {
+            background: #fff;
+            color: #36454F;
+            padding: 10px 20px;
+            border: 2px solid #D4AF37;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .size-guide-btn:hover, .color-variation-btn:hover {
+            background: #D4AF37;
+            color: #fff;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+        }
+
+        .modal-content {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 500px;
+            text-align: left;
+            position: relative;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .section h2 {
+                font-size: 2rem;
+            }
+
+            .sticky-footer {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Matte Wet and Dry Powder</h1>
+            <p>Add that special something to your style with the perfect shoulder bag</p>
+            <a href="https://nora.orderonline.id/matte-wet-and-dry-powder" target="_self" class="cta-btn">PESAN SEKARANG</a>
+        </div>
+    </section>
+
+    <section class="section benefits">
+        <h2>Kenapa Memilih Kami?</h2>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <h3>Premium Quality Materials</h3>
+                <p>Bahan berkualitas tinggi yang nyaman dan tahan lama</p>
+            </div>
+            <div class="benefit-card">
+                <h3>Trendy Indonesian Fashion</h3>
+                <p>Desain mengikuti tren fashion terkini untuk wanita Indonesia</p>
+            </div>
+            <div class="benefit-card">
+                <h3>Perfect Fit & Comfort</h3>
+                <p>Cutting sempurna yang mengikuti lekuk tubuh dengan nyaman</p>
+            </div>
+            <div class="benefit-card">
+                <h3>Instagram-Perfect Style</h3>
+                <p>Tampilan yang sempurna untuk OOTD dan acara special</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section gallery parallax" style="background-image: url('https://cdn.newfastcdn.com/image/242def26cd0406bdac8a8503b872b9717e7a7cb2.jpeg');">
+        <h2 style="color: #F5F5DC;">Inspirasi OOTD</h2>
+        <div class="gallery">
+            <img src="https://cdn.newfastcdn.com/image/426f6868625864405f70f36889fb67119ad8d60b.jpeg" alt="OOTD 1">
+            <img src="https://cdn.newfastcdn.com/image/ccd72d394cd6a7553687c4f54667ce06c7445899.jpeg" alt="OOTD 2">
+            <img src="https://cdn.newfastcdn.com/image/684e8693b02a204aedc9ba34a3945ce81995ad41.jpeg" alt="OOTD 3">
+            <img src="https://cdn.newfastcdn.com/image/82b7fc9760d7ebacedbb2668d0f85a5ec68a08ce.jpeg" alt="OOTD 4">
+        </div>
+    </section>
+
+    <section class="section testimonials">
+        <h2>Apa Kata Mereka?</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <p>"Bahannya premium banget! Nyaman dipakai seharian dan modelnya bikin pede. Worth it!"</p>
+                <p><strong>Sinta R., Jakarta</strong> ⭐⭐⭐⭐⭐</p>
+            </div>
+            <div class="testimonial-card">
+                <p>"Kualitas jahitan rapi, bahan tidak mudah kusut. Cocok untuk acara formal maupun casual."</p>
+                <p><strong>Maya D., Surabaya</strong> ⭐⭐⭐⭐⭐</p>
+            </div>
+            <div class="testimonial-card">
+                <p>"Ukurannya pas banget! Design-nya timeless, bisa dipake bertahun-tahun."</p>
+                <p><strong>Lina S., Bandung</strong> ⭐⭐⭐⭐⭐</p>
+            </div>
+            <div class="testimonial-card">
+                <p>"Packagingnya bagus, bahan sesuai ekspektasi. Pasti order warna lain!"</p>
+                <p><strong>Rika W., Medan</strong> ⭐⭐⭐⭐⭐</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section pricing">
+        <h2>Penawaran Spesial</h2>
+        <div class="price-details">
+            <span class="normal">Harga Normal: Rp 262.500</span> | 
+            <span class="promo">Promo Hari Ini: Rp 175.000</span>
+        </div>
+        <div class="urgency">🔥 UP TO 45% OFF 🔥</div>
+        <div class="countdown">
+            <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>
+        </div>
+        <p>Sedang dilihat: <span id="viewers">1800</span> orang</p>
+        <p>Stok tersisa: <span id="stock">50</span> unit</p>
+        <button class="size-guide-btn">Panduan Ukuran</button>
+        <button class="color-variation-btn">Variasi Warna</button>
+        <a href="https://nora.orderonline.id/matte-wet-and-dry-powder" target="_self" class="cta-btn">PESAN SEKARANG</a>
+    </section>
+
+    <div id="sizeGuideModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Panduan Ukuran</h3>
+            <p>Ukuran standar untuk wanita Indonesia:</p>
+            <ul>
+                <li>S: Panjang 50cm, Lebar 30cm</li>
+                <li>M: Panjang 52cm, Lebar 32cm</li>
+                <li>L: Panjang 54cm, Lebar 34cm</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="colorVariationModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Variasi Warna</h3>
+            <p>Pilih warna favoritmu:</p>
+            <ul>
+                <li>Rose Gold</li>
+                <li>Cream</li>
+                <li>Charcoal</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="sticky-footer">
+        <div>
+            <span class="normal">Rp 262.500</span> | <span class="promo">Rp 175.000</span>
+        </div>
+        <a href="https://nora.orderonline.id/matte-wet-and-dry-powder" target="_self" class="cta-btn">PESAN SEKARANG</a>
+    </div>
+
+    <script>
+        // Countdown Timer
+        function startCountdown() {
+            const endTime = new Date().getTime() + (24 * 60 * 60 * 1000);
+            setInterval(() => {
+                const now = new Date().getTime();
+                const distance = endTime - now;
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+                document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+                document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+            }, 1000);
+        }
+
+        // Dynamic Viewers and Stock
+        function updateDynamicStats() {
+            const viewers = Math.floor(Math.random() * (2500 - 1800 + 1)) + 1800;
+            const stock = Math.floor(Math.random() * (50 - 10 + 1)) + 10;
+            document.getElementById('viewers').textContent = viewers;
+            document.getElementById('stock').textContent = stock;
+        }
+
+        // Modal Functionality
+        const sizeGuideBtn = document.querySelector('.size-guide-btn');
+        const colorVariationBtn = document.querySelector('.color-variation-btn');
+        const sizeGuideModal = document.getElementById('sizeGuideModal');
+        const colorVariationModal = document.getElementById('colorVariationModal');
+        const closes = document.querySelectorAll('.close');
+
+        sizeGuideBtn.onclick = () => sizeGuideModal.style.display = 'flex';
+        colorVariationBtn.onclick = () => colorVariationModal.style.display = 'flex';
+        closes.forEach(close => {
+            close.onclick = () => {
+                sizeGuideModal.style.display = 'none';
+                colorVariationModal.style.display = 'none';
+            };
+        });
+
+        window.onclick = (event) => {
+            if (event.target == sizeGuideModal) sizeGuideModal.style.display = 'none';
+            if (event.target == colorVariationModal) colorVariationModal.style.display = 'none';
+        };
+
+        // Initialize
+        startCountdown();
+        updateDynamicStats();
+        setInterval(updateDynamicStats, 5000);
+    </script>
+</body>
+</html>
