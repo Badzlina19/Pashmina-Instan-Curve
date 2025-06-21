@@ -1,545 +1,396 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>Matte Wet & Dry Powder – Premium Fashion for Indonesia</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Premium Matte Wet & Dry Powder | Tampil elegan, nyaman, dan percaya diri dengan produk fashion terbaru. Diskon up to 45%!">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --rose-gold: #D4AF37;
-      --cream: #F5F5DC;
-      --charcoal: #36454F;
-      --pastel-pink: #F8E7EB;
-      --border-radius: 18px;
-      --shadow: 0 4px 32px 0 rgba(52, 60, 94, 0.08);
-    }
-    html, body {
-      margin: 0; padding: 0; box-sizing: border-box;
-      background: var(--cream);
-      color: var(--charcoal);
-      font-family: 'Montserrat', Arial, sans-serif;
-      font-size: 17px;
-      line-height: 1.7;
-      scroll-behavior: smooth;
-    }
-    h1, h2, h3, .serif {
-      font-family: 'Playfair Display', serif;
-      color: var(--charcoal);
-      letter-spacing: -0.5px;
-    }
-    h1 { font-size: 2.4rem; margin: 0 0 10px; }
-    h2 { font-size: 1.5rem; margin-top: 38px; }
-    h3 { font-size: 1.1rem; margin-bottom: 0.8em; }
-    .gold { color: var(--rose-gold); }
-    .container {
-      max-width: 880px;
-      margin: 0 auto;
-      padding: 0 14px;
-    }
-    .hero {
-      position: relative;
-      min-height: 420px;
-      background: linear-gradient(130deg, var(--pastel-pink) 65%, #fff 100%);
-      border-radius: 0 0 var(--border-radius) var(--border-radius);
-      box-shadow: var(--shadow);
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: flex-end;
-      overflow: hidden;
-      margin-bottom: 38px;
-    }
-    .hero-imgs {
-      position: absolute;
-      top: 0; right: 0;
-      display: flex;
-      gap: 18px;
-      height: 100%;
-      z-index: 1;
-    }
-    .hero-imgs img {
-      height: 370px;
-      width: auto;
-      object-fit: cover;
-      border-radius: var(--border-radius);
-      box-shadow: 0 6px 32px 0 rgba(52, 60, 94, 0.09);
-      transition: transform 1s cubic-bezier(.38,.07,.62,.93);
-      opacity: 0.98;
-      margin-top: 20px;
-    }
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      padding-top: 48px;
-      padding-bottom: 38px;
-      max-width: 55%;
-    }
-    .tagline {
-      font-size: 1.3rem;
-      margin-bottom: 20px;
-      color: var(--charcoal);
-      opacity: 0.82;
-    }
-    .price-row {
-      display: flex;
-      gap: 18px;
-      align-items: center;
-      font-size: 1.14rem;
-      margin: 18px 0 9px 0;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: bold;
-    }
-    .normal-price {text-decoration: line-through; color: #b8b8b8;}
-    .promo-price {color: var(--rose-gold); font-size: 1.5em;}
-    .urgency {background: #fff5e5; color: #D14B4B; padding: 7px 22px; border-radius: 16px; font-weight: 600; display: inline-block; margin-top: 6px; margin-bottom: 20px; letter-spacing: 1px;}
-    .order-btn {
-      background: linear-gradient(90deg, var(--rose-gold) 40%, #f4e7b7 100%);
-      color: #fff;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1.18rem;
-      font-weight: bold;
-      border: none;
-      border-radius: 44px;
-      padding: 16px 38px;
-      margin-top: 18px;
-      cursor: pointer;
-      box-shadow: 0 2px 10px 0 rgba(212, 175, 55, 0.11);
-      letter-spacing: 1px;
-      transition: background 0.3s, transform 0.15s;
-      outline: none;
-      text-shadow: 0 1px 6px rgba(0,0,0,0.04);
-      text-decoration: none;
-      display: inline-block;
-    }
-    .order-btn:hover { background: var(--rose-gold); color: #fff; transform: translateY(-2px) scale(1.03);}
-    .counters {
-      display: flex;
-      gap: 27px;
-      margin-top: 12px;
-      font-size: 1.01em;
-      color: #666;
-      opacity: 0.82;
-    }
-    .counters span {display: flex; align-items: center; gap: 7px;}
-    .counters .dot {width: 8px; height: 8px; background: var(--rose-gold); border-radius: 50%;}
-    .main-gallery {
-      display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 36px;
-      align-items: start;
-      margin: 52px 0 44px 0;
-    }
-    .main-gallery img {
-      width: 100%; border-radius: var(--border-radius); box-shadow: var(--shadow);
-    }
-    .benefits-list {
-      display: flex; flex-direction: column; gap: 19px;
-      font-size: 1.08rem;
-      margin-top: 14px;
-    }
-    .benefits-list li {
-      list-style: none;
-      padding-left: 0;
-      position: relative;
-      margin-bottom: 2px;
-      font-weight: 500;
-      color: var(--charcoal);
-      background: #fff;
-      border-left: 5px solid var(--rose-gold);
-      border-radius: 0 var(--border-radius) var(--border-radius) 0;
-      padding: 13px 19px;
-      box-shadow: 0 2px 9px 0 rgba(52,60,94,0.04);
-      opacity: 0.97;
-    }
-    .color-variations {
-      display: flex; gap: 18px; margin: 22px 0;
-      align-items: center;
-    }
-    .color-swatch {
-      width: 44px; height: 44px; border-radius: 12px; border: 2px solid var(--rose-gold);
-      margin-right: 7px; cursor: pointer; box-shadow: 0 2px 8px #d4af3724; transition: box-shadow .2s;
-      display: inline-block;
-    }
-    .color-swatch.selected { box-shadow: 0 4px 18px #d4af3744; border-width: 3px;}
-    .color-label { font-size: .98em; color: #555; }
-    .size-guide-trigger {
-      color: var(--rose-gold);
-      cursor: pointer;
-      text-decoration: underline;
-      font-weight: 600;
-      font-size: 1.04em;
-      margin-left: 9px;
-    }
-    .ootd-gallery {
-      display: flex; gap: 18px; overflow-x: auto;
-      margin: 22px 0 0 0;
-    }
-    .ootd-gallery img {
-      height: 120px; width: 90px; object-fit: cover;
-      border-radius: 13px; box-shadow: var(--shadow);
-      flex-shrink: 0;
-    }
-    .testimonials {
-      margin: 52px 0 38px;
-      background: #fffef8;
-      border-radius: var(--border-radius);
-      box-shadow: var(--shadow);
-      padding: 36px 24px 20px 24px;
-    }
-    .testimonial {
-      margin-bottom: 23px;
-      border-left: 3px solid var(--rose-gold);
-      padding-left: 18px;
-      font-style: italic;
-      color: #333;
-      font-size: 1.03em;
-      position: relative;
-    }
-    .testimonial:last-child { margin-bottom: 0; }
-    .testimonial .author {
-      font-weight: bold; color: var(--rose-gold); font-style: normal; display: block; margin-top: 7px;
-    }
-    .stars { color: gold; font-size: 1.03em;}
-    .influencer-testimonials {
-      margin: 36px 0 0 0;
-      display: flex; flex-wrap: wrap; gap: 23px;
-      align-items: flex-start;
-    }
-    .influencer {
-      flex: 1 1 185px;
-      background: #fff;
-      border-radius: var(--border-radius);
-      box-shadow: 0 2px 8px #d4af3724;
-      padding: 19px 18px;
-      text-align: center;
-      font-style: italic;
-      font-size: .98em;
-    }
-    .influencer img {
-      width: 74px; height: 74px; object-fit: cover; border-radius: 50%; margin-bottom: 8px; border: 2px solid var(--rose-gold);
-    }
-    .sticky-price-banner {
-      position: fixed;
-      left: 0; right: 0; bottom: 0;
-      background: linear-gradient(90deg, var(--rose-gold) 20%, #fff 100%);
-      color: #222;
-      box-shadow: 0 -3px 23px 0 #d4af3722;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 13px 19px 13px 19px;
-      z-index: 99;
-      font-size: 1.1em;
-      border-radius: 19px 19px 0 0;
-    }
-    .sticky-price-banner .promo-price { font-size: 1.2em;}
-    .sticky-price-banner .order-btn { padding: 10px 28px; font-size: 1em; margin: 0;}
-    /* Size Guide Modal */
-    .modal-bg {
-      display: none; position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
-      background: rgba(0,0,0,0.38); z-index: 1111;
-      align-items: center; justify-content: center;
-    }
-    .modal {
-      background: #fff;
-      border-radius: var(--border-radius);
-      box-shadow: 0 6px 38px 0 #36454f18;
-      padding: 32px 28px;
-      max-width: 360px;
-      width: 92vw;
-      text-align: left;
-      animation: fadeIn 0.5s cubic-bezier(.39,.07,.62,.93);
-      position: relative;
-    }
-    .modal h3 { margin-top: 0;}
-    .modal-close {
-      position: absolute; top: 13px; right: 18px; font-size: 1.6em; color: #aaa; background: none; border: none; cursor: pointer;
-    }
-    .countdown {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1.2em;
-      font-weight: bold;
-      color: #d14b4b;
-      letter-spacing: 2px;
-      background: #fff7e7;
-      border-radius: 16px;
-      padding: 9px 22px;
-      display: inline-block;
-      margin-bottom: 10px;
-    }
-    /* Animations */
-    @keyframes fadeIn {
-      0% {opacity: 0; transform: translateY(80px);}
-      100% {opacity: 1; transform: translateY(0);}
-    }
-    [data-animate] { opacity: 0; transform: translateY(50px); transition: all 0.8s cubic-bezier(.39,.07,.62,.93);}
-    [data-animate].animated { opacity: 1; transform: none;}
-    /* Parallax effect for hero */
-    @media (max-width: 900px) {
-      .main-gallery { grid-template-columns: 1fr; }
-      .hero-content {max-width: 100%;}
-      .hero-imgs {position: static; flex-direction: row; justify-content: flex-end;}
-      .hero-imgs img {height: 170px;}
-    }
-    @media (max-width: 600px) {
-      html { font-size: 15px;}
-      .main-gallery { gap: 19px;}
-      .container { padding: 0 5px;}
-      .hero { min-height: 220px; }
-      .hero-imgs img {height: 110px;}
-      .benefits-list li {font-size: 1em; padding: 10px 12px;}
-      .sticky-price-banner { font-size: .98em; padding: 7px 6px;}
-      .modal { padding: 19px 7px;}
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nora Crossbody Leather Bag - Premium Fashion</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #F5F5DC;
+            color: #36454F;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            background: url('https://cdn.newfastcdn.com/image/05936f6ee516284e56190e9ef81dc3dba248ddaa-700.jpeg') no-repeat center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            color: #F5F5DC;
+        }
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(54, 69, 79, 0.5);
+        }
+        .header-content {
+            position: relative;
+            z-index: 1;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .header-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+        .header-content p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        .cta-btn {
+            background: #D4AF37;
+            color: #36454F;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-weight: 500;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+            display: inline-block;
+        }
+        .cta-btn:hover {
+            transform: scale(1.05);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+        }
+        section {
+            padding: 80px 0;
+        }
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #36454F;
+        }
+        .benefits-grid, .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        .benefit-card, .testimonial-card {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            border: 1px solid #D4AF37;
+        }
+        .benefit-card:hover, .testimonial-card:hover {
+            transform: translateY(-10px);
+        }
+        .price-section {
+            text-align: center;
+            background: #36454F;
+            color: #F5F5DC;
+            padding: 40px 20px;
+        }
+        .price-old {
+            text-decoration: line-through;
+            color: #D4AF37;
+            font-size: 1.2rem;
+            margin-right: 1rem;
+        }
+        .price-promo {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #D4AF37;
+        }
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+            font-size: 1.5rem;
+        }
+        .countdown div {
+            background: #D4AF37;
+            padding: 10px;
+            border-radius: 5px;
+            color: #36454F;
+        }
+        .sticky-price {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #D4AF37;
+            padding: 15px;
+            text-align: center;
+            z-index: 1000;
+            box-shadow: 0 -5px 10px rgba(0,0,0,0.2);
+            display: none;
+        }
+        .sticky-price .cta-btn {
+            background: #36454F;
+            color: #F5F5DC;
+        }
+        .size-guide-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background: #F5F5DC;
+            padding: 2rem;
+            border-radius: 10px;
+            max-width: 500px;
+            text-align: center;
+            position: relative;
+        }
+        .close-modal {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        .color-variations img, .gallery-grid img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            transition: transform 0.3s ease;
+        }
+        .color-variations img:hover, .gallery-grid img:hover {
+            transform: scale(1.05);
+        }
+        .viewed-counter, .stock-counter {
+            text-align: center;
+            font-size: 1.1rem;
+            margin: 1rem 0;
+            color: #D4AF37;
+        }
+        footer {
+            background: #36454F;
+            color: #F5F5DC;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+            .sticky-price {
+                display: block;
+            }
+            .parallax {
+                background-attachment: scroll;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="hero">
-    <div class="hero-imgs" aria-hidden="true">
-      <img src="https://cdn.newfastcdn.com/image/01fca61a9c726c9f6f82fd5e2426c64e5394c110.jpeg" alt="Matte Wet & Dry Powder - Premium" loading="eager" style="box-shadow:0 12px 40px #d4af3727;">
-      <img src="https://cdn.newfastcdn.com/image/242def26cd0406bdac8a8503b872b9717e7a7cb2.jpeg" alt="Fashion Model 1" loading="lazy">
-      <img src="https://cdn.newfastcdn.com/image/a37189be453ff1f4614a091e8a33ed80cf37d44e.jpeg" alt="Fashion Model 2" loading="lazy">
-    </div>
-    <div class="container hero-content">
-      <span class="tagline serif" data-animate>
-        Add that special something to your style with the perfect shoulder bag
-      </span>
-      <h1 class="serif gold" data-animate>
-        Matte Wet & Dry Powder
-      </h1>
-      <div class="price-row" data-animate>
-        <span class="normal-price">Harga Normal: Rp 262.500</span>
-        <span class="promo-price">Promo Hari Ini: Rp 175.000</span>
-      </div>
-      <div class="urgency" data-animate>
-        🔥 UP TO 45% OFF 🔥
-      </div>
-      <div class="countdown" id="countdown" data-animate>
-        Sisa waktu promo: <span id="timer"></span>
-      </div>
-      <div class="counters" data-animate>
-        <span><span class="dot"></span> <span id="viewer-count">2,138</span> sedang dilihat</span>
-        <span><span class="dot"></span> Stok tersisa: <span id="stock-count">18</span></span>
-      </div>
-      <a class="order-btn" href="https://nora.orderonline.id/matte-wet-and-dry-powder" target="_self" data-animate>
-        PESAN SEKARANG - Dapatkan Style Premium
-      </a>
-    </div>
-  </div>
+    <header>
+        <div class="header-content">
+            <h1>Nora Crossbody Leather Bag</h1>
+            <p>Add that special something to your style with the perfect shoulder bag</p>
+            <a href="https://nora.orderonline.id/crossbody-leather-bag" class="cta-btn">BISA COD/TRANSFER</a>
+        </div>
+    </header>
 
-  <div class="container">
-    <section class="main-gallery">
-      <div>
-        <img src="https://cdn.newfastcdn.com/image/426f6868625864405f70f36889fb67119ad8d60b.jpeg" alt="Matte Wet & Dry Powder - Product Detail" data-animate>
-        <div class="color-variations" data-animate>
-          <span class="color-label">Varian Warna:</span>
-          <span class="color-swatch" title="Ivory" style="background: #f9efdf;" onclick="selectColor(this, 'Ivory')"></span>
-          <span class="color-swatch" title="Beige" style="background: #e9dab0;" onclick="selectColor(this, 'Beige')"></span>
-          <span class="color-swatch" title="Natural" style="background: #e7c495;" onclick="selectColor(this, 'Natural')"></span>
-          <span class="color-swatch selected" title="Honey" style="background: #d7b08c;" onclick="selectColor(this, 'Honey')"></span>
-          <span class="color-swatch" title="Caramel" style="background: #ad8862;" onclick="selectColor(this, 'Caramel')"></span>
+    <section id="benefits">
+        <div class="container">
+            <h2>Kenapa Memilih Nora?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h3>Premium Quality Materials</h3>
+                    <p>Bahan berkualitas tinggi yang nyaman dan tahan lama</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Trendy Indonesian Fashion</h3>
+                    <p>Desain mengikuti tren fashion terkini untuk wanita Indonesia</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Perfect Fit & Comfort</h3>
+                    <p>Cutting sempurna yang mengikuti lekuk tubuh dengan nyaman</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Instagram-Perfect Style</h3>
+                    <p>Tampilan yang sempurna untuk OOTD dan acara special</p>
+                </div>
+            </div>
         </div>
-        <div style="margin-bottom: 6px;">
-          <span class="color-label">Panduan Ukuran:</span>
-          <span class="size-guide-trigger" onclick="openSizeGuide()">Lihat Size Guide</span>
-        </div>
-        <div class="ootd-gallery" data-animate>
-          <img src="https://cdn.newfastcdn.com/image/684e8693b02a204aedc9ba34a3945ce81995ad41.jpeg" alt="OOTD 1">
-          <img src="https://cdn.newfastcdn.com/image/82b7fc9760d7ebacedbb2668d0f85a5ec68a08ce.jpeg" alt="OOTD 2">
-          <img src="https://cdn.newfastcdn.com/image/ccd72d394cd6a7553687c4f54667ce06c7445899.jpeg" alt="OOTD 3">
-          <img src="https://cdn.newfastcdn.com/image/86f6e4f5e1c904af668c50fabaa8c20373c4d9b9.gif" alt="Gift OOTD 1">
-          <img src="https://cdn.newfastcdn.com/image/d889b5f7ae691b84372c855fd5c0da0a129e983b.gif" alt="Gift OOTD 2">
-        </div>
-      </div>
-      <div>
-        <h2 class="serif gold" data-animate>Kenapa Pilih Matte Wet & Dry Powder?</h2>
-        <ul class="benefits-list" data-animate>
-          <li>Premium Quality Materials – Bahan berkualitas tinggi yang nyaman dan tahan lama</li>
-          <li>Trendy Indonesian Fashion – Desain mengikuti tren fashion terkini untuk wanita Indonesia</li>
-          <li>Perfect Fit & Comfort – Cutting sempurna yang mengikuti lekuk tubuh dengan nyaman</li>
-          <li>Instagram-Perfect Style – Tampilan yang sempurna untuk OOTD dan acara special</li>
-        </ul>
-        <img src="https://cdn.newfastcdn.com/image/426f6868625864405f70f36889fb67119ad8d60b.jpeg" alt="Detail Product" style="margin:22px 0 0 0;width:100%;border-radius:13px;box-shadow:var(--shadow);" data-animate>
-      </div>
     </section>
 
-    <section class="testimonials" data-animate>
-      <h2 class="serif gold" style="margin-bottom:18px;">Testimoni Pelanggan</h2>
-      <div class="testimonial">
-        "Bahannya premium banget! Nyaman dipakai seharian dan modelnya bikin pede. Worth it!"
-        <span class="author">Sinta R., Jakarta <span class="stars">★★★★★</span></span>
-      </div>
-      <div class="testimonial">
-        "Kualitas jahitan rapi, bahan tidak mudah kusut. Cocok untuk acara formal maupun casual."
-        <span class="author">Maya D., Surabaya <span class="stars">★★★★★</span></span>
-      </div>
-      <div class="testimonial">
-        "Ukurannya pas banget! Design-nya timeless, bisa dipake bertahun-tahun."
-        <span class="author">Lina S., Bandung <span class="stars">★★★★★</span></span>
-      </div>
-      <div class="testimonial">
-        "Packagingnya bagus, bahan sesuai ekspektasi. Pasti order warna lain!"
-        <span class="author">Rika W., Medan <span class="stars">★★★★★</span></span>
-      </div>
+    <section id="price" class="price-section">
+        <div class="container">
+            <h2>Promo Spesial Hari Ini</h2>
+            <p><span class="price-old">Harga Normal: Rp 277.500</span> <span class="price-promo">Promo Hari Ini: Rp 185.000</span></p>
+            <p class="viewed-counter">Sedang dilihat: <span id="viewed">1800</span> orang</p>
+            <p class="stock-counter">Stok tersisa: <span id="stock">50</span> unit</p>
+            <div class="countdown">
+                <div id="hours">00</div>
+                <div id="minutes">00</div>
+                <div id="seconds">00</div>
+            </div>
+            <a href="https://nora.orderonline.id/crossbody-leather-bag" class="cta-btn">Pesan Sekarang</a>
+        </div>
     </section>
 
-    <section class="influencer-testimonials" data-animate>
-      <div class="influencer">
-        <img src="https://randomuser.me/api/portraits/women/25.jpg" alt="Fashion Influencer 1">
-        "Powder ini bikin makeup flawless dan tahan lama, cocok buat OOTD dan event. Highly recommended!"
-        <div class="author" style="color:var(--rose-gold);font-weight:500;margin-top:6px;">@fashionella.id</div>
-      </div>
-      <div class="influencer">
-        <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Fashion Influencer 2">
-        "Suka banget sama hasil akhirnya, kulit kelihatan halus dan glowing natural. Keren!"
-        <div class="author" style="color:var(--rose-gold);font-weight:500;margin-top:6px;">@dewi_style</div>
-      </div>
-      <div class="influencer">
-        <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Fashion Influencer 3">
-        "Varian warnanya pas buat kulit Indonesia. Packagingnya pun mewah, love it!"
-        <div class="author" style="color:var(--rose-gold);font-weight:500;margin-top:6px;">@nabilafashion</div>
-      </div>
+    <section id="color-variations" class="parallax" style="background-image: url('https://cdn.newfastcdn.com/image/d84d68f28b988f1332154653b0142ca75c2d3f59.jpeg');">
+        <div class="container">
+            <h2>Pilih Warna Favoritmu</h2>
+            <div class="color-variations benefits-grid">
+                <img src="https://cdn.newfastcdn.com/image/31e98d8c4ea0e7037cf3954580ddd5a469cb17cf.jpeg" alt="Color 1">
+                <img src="https://cdn.newfastcdn.com/image/34e8df2a101cccf32424ec197d0623fc5ac76985.jpeg" alt="Color 2">
+                <img src="https://cdn.newfastcdn.com/image/75a304a15438bafe8f5fdf7e83825599aaf00bfb.jpeg" alt="Color 3">
+            </div>
+        </div>
     </section>
 
-    <div style="text-align:center; margin:48px 0 60px;">
-      <a class="order-btn" href="https://nora.orderonline.id/matte-wet-and-dry-powder" target="_self">
-        PESAN SEKARANG - Dapatkan Style Premium
-      </a>
-    </div>
-  </div>
+    <section id="testimonials">
+        <div class="container">
+            <h2>Apa Kata Mereka?</h2>
+            <div class="benefits-grid">
+                <div class="testimonial-card">
+                    <p>"Bahannya premium banget! Nyaman dipakai seharian dan modelnya bikin pede. Worth it!"</p>
+                    <p><strong>Sinta R., Jakarta</strong> ⭐⭐⭐⭐⭐</p>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Kualitas jahitan rapi, bahan tidak mudah kusut. Cocok untuk acara formal maupun casual."</p>
+                    <p><strong>Maya D., Surabaya</strong> ⭐⭐⭐⭐⭐</p>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Ukurannya pas banget! Design-nya timeless, bisa dipake bertahun-tahun."</p>
+                    <p><strong>Lina S., Bandung</strong> ⭐⭐⭐⭐⭐</p>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Packagingnya bagus, bahan sesuai ekspektasi. Pasti order warna lain!"</p>
+                    <p><strong>Rika W., Medan</strong> ⭐⭐⭐⭐⭐</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Size Guide Modal -->
-  <div class="modal-bg" id="modal-bg">
-    <div class="modal">
-      <button class="modal-close" onclick="closeSizeGuide()">&times;</button>
-      <h3 class="serif gold">Panduan Ukuran</h3>
-      <table style="width:100%;margin-top:14px;font-size:0.96em;">
-        <tr style="background:#f9f6ee;">
-          <th style="padding:6px 0;">Ukuran</th>
-          <th style="padding:6px 0;">Lingkar</th>
-          <th style="padding:6px 0;">Panjang</th>
-        </tr>
-        <tr><td>S</td><td>86-90cm</td><td>60cm</td></tr>
-        <tr><td>M</td><td>91-95cm</td><td>62cm</td></tr>
-        <tr><td>L</td><td>96-100cm</td><td>64cm</td></tr>
-        <tr><td>XL</td><td>101-105cm</td><td>66cm</td></tr>
-      </table>
-      <div style="margin-top:16px;font-size:0.93em;color:#555;">
-        Pilih ukuran sesuai kebutuhan. Jika ragu, pilih 1 ukuran lebih besar untuk kenyamanan maksimal.
-      </div>
+    <section id="ootd-gallery">
+        <div class="container">
+            <h2>Inspirasi OOTD</h2>
+            <div class="gallery-grid">
+                <img src="https://cdn.newfastcdn.com/image/3944faa05572f8259b3c5a0b61b2d617ab1d9d54-600.jpeg" alt="OOTD 1">
+                <img src="https://cdn.newfastcdn.com/image/997e966947d82c6aba32b0aceb3b77207efa6f43-600.jpeg" alt="OOTD 2">
+                <img src="https://cdn.newfastcdn.com/image/25bc0a6a6e5a305e8fc6350803c9591ac79f3a9b-600.jpeg" alt="OOTD 3">
+            </div>
+        </div>
+    </section>
+
+    <section id="size-guide">
+        <div class="container">
+            <h2>Size Guide</h2>
+            <p style="text-align: center;">Klik untuk melihat panduan ukuran</p>
+            <button onclick="openModal()" class="cta-btn" style="display: block; margin: 1rem auto;">Lihat Size Guide</button>
+        </div>
+    </section>
+
+    <div id="sizeGuideModal" class="size-guide-modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <h3>Panduan Ukuran</h3>
+            <p>Dimensi: 25cm (P) x 15cm (T) x 8cm (L)</p>
+            <p>Berat: 0.5kg</p>
+            <p>Kapasitas: Muat dompet, ponsel, kunci, dan kosmetik kecil</p>
+            <img src="https://cdn.newfastcdn.com/image/498bfcaec663edcafefffb9ebca0ea8bb5c0c178-600.jpeg" alt="Size Guide" style="width: 100%; margin-top: 1rem;">
+        </div>
     </div>
-  </div>
-  <!-- Sticky Price Banner -->
-  <div class="sticky-price-banner">
-    <span>
-      <span class="normal-price">Rp 262.500</span>
-      <span class="promo-price gold">Rp 175.000</span>
-    </span>
-    <a class="order-btn" href="https://nora.orderonline.id/matte-wet-and-dry-powder" target="_self">
-      PESAN SEKARANG
-    </a>
-  </div>
-  <script>
-    // Elegant fade-in animation
-    function animateOnScroll() {
-      document.querySelectorAll('[data-animate]').forEach(el => {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight * 0.95) {
-          el.classList.add('animated');
+
+    <div class="sticky-price">
+        <p><span class="price-promo">Rp 185.000</span> <a href="https://nora.orderonline.id/crossbody-leather-bag" class="cta-btn">Pesan Sekarang</a></p>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Nora Fashion. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Countdown Timer
+        function startCountdown() {
+            const endTime = new Date().getTime() + 24 * 60 * 60 * 1000;
+            const timer = setInterval(() => {
+                const now = new Date().getTime();
+                const distance = endTime - now;
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+                document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+                document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+                if (distance < 0) {
+                    clearInterval(timer);
+                    document.querySelector('.countdown').textContent = 'Promo Berakhir!';
+                }
+            }, 1000);
         }
-      });
-    }
-    window.addEventListener('scroll', animateOnScroll);
-    window.addEventListener('DOMContentLoaded', animateOnScroll);
 
-    // Countdown timer (24 hours from first page open)
-    function getTargetTime() {
-      let t = localStorage.getItem('fashionCountdownTarget');
-      if (t) return parseInt(t, 10);
-      let now = Date.now();
-      let target = now + 24 * 60 * 60 * 1000;
-      localStorage.setItem('fashionCountdownTarget', target);
-      return target;
-    }
-    function pad(n) { return n < 10 ? "0"+n : n; }
-    function updateCountdown() {
-      let now = Date.now();
-      let target = getTargetTime();
-      let diff = target - now;
-      if (diff < 0) diff = 0;
-      let h = Math.floor(diff/3600000), m = Math.floor((diff%3600000)/60000), s = Math.floor((diff%60000)/1000);
-      document.getElementById('timer').textContent = pad(h) + ":" + pad(m) + ":" + pad(s);
-      if (diff <= 0) {
-        document.getElementById('countdown').textContent = "Promo segera berakhir!";
-      } else {
-        setTimeout(updateCountdown, 999);
-      }
-    }
-    updateCountdown();
-
-    // Dynamic counters
-    function randomInRange(min, max) {
-      return Math.floor(Math.random() * (max - min + 1)) + min;
-    }
-    // Viewer count
-    function animateViewerCount() {
-      let base = randomInRange(1800, 2500);
-      let el = document.getElementById('viewer-count');
-      function fluctuate() {
-        base += randomInRange(-7, 7);
-        if (base < 1800) base = 1820;
-        if (base > 2500) base = 2490;
-        el.textContent = base;
-        setTimeout(fluctuate, randomInRange(1800, 3500));
-      }
-      el.textContent = base;
-      fluctuate();
-    }
-    animateViewerCount();
-
-    // Stock count
-    function animateStockCount() {
-      let stock = randomInRange(15, 23);
-      let el = document.getElementById('stock-count');
-      function drop() {
-        stock -= randomInRange(0, 1);
-        if (stock < 8) stock = randomInRange(12, 19);
-        el.textContent = stock;
-        setTimeout(drop, randomInRange(5000, 11000));
-      }
-      el.textContent = stock;
-      drop();
-    }
-    animateStockCount();
-
-    // Size guide modal
-    function openSizeGuide() {
-      document.getElementById("modal-bg").style.display = "flex";
-      setTimeout(() => document.getElementById("modal-bg").querySelector('.modal').focus(), 10);
-    }
-    function closeSizeGuide() {
-      document.getElementById("modal-bg").style.display = "none";
-    }
-    document.getElementById("modal-bg").addEventListener('click', function(e){
-      if(e.target === this) closeSizeGuide();
-    });
-
-    // Color selection
-    function selectColor(el, colorName) {
-      document.querySelectorAll('.color-swatch').forEach(e => e.classList.remove('selected'));
-      el.classList.add('selected');
-    }
-
-    // Parallax on hero images (desktop)
-    if(window.innerWidth > 800){
-      window.addEventListener('scroll', function(){
-        let heroImgs = document.querySelector('.hero-imgs');
-        if(heroImgs){
-          let scrolled = window.scrollY, limit = 120;
-          heroImgs.style.transform = "translateY(" + Math.min(scrolled/2, limit) + "px)";
+        // Viewed Counter
+        function updateViewedCounter() {
+            let viewed = Math.floor(Math.random() * (2500 - 1800 + 1)) + 1800;
+            document.getElementById('viewed').textContent = viewed;
         }
-      });
-    }
-  </script>
+
+        // Stock Counter
+        function updateStockCounter() {
+            let stock = Math.floor(Math.random() * (50 - 10 + 1)) + 10;
+            document.getElementById('stock').textContent = stock;
+        }
+
+        // Modal Functions
+        function openModal() {
+            document.getElementById('sizeGuideModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('sizeGuideModal').style.display = 'none';
+        }
+
+        // Initialize
+        startCountdown();
+        updateViewedCounter();
+        updateStockCounter();
+        setInterval(updateViewedCounter, 10000);
+        setInterval(updateStockCounter, 15000);
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
